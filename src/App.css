@@ -46,44 +46,4 @@ body{
   align-items: center;
   padding: 0%;
 }
-.passwordBox{
-  width: 350px;
-  background-color: blueviolet;
-  
-  padding: 10px;
-  
-}
-.passwordBoxIn{
-  display: flex;
 
-}
-.passwordBoxIn input{
-  flex-basis: 80%;
-  padding-left: 5px;
-}
-.passwordBoxIn button{
-  flex-basis: 20%;
-  padding: 10px 0px;
-}
-.passLength{
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-.passLength input{
-
-  width: 60px;
-
-}
-.passLength label{
-  flex-basis: 80%;
-}
-
-.btn{
-  width: 100%;
-  padding: 10px 0px;
-  cursor: pointer;
-
-}

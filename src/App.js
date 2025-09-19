@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { LC, NC, SC, UC } from "./Data/PassChar";
 import { toast, ToastContainer } from "react-toastify";
+import { motion } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -50,7 +51,11 @@ function App() {
 
           {/* Password Display */}
           <div className="flex items-center mb-6">
-            <input
+            <motion.input
+              key={fPass} // re-trigger animation each time password changes
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               type="text"
               readOnly
               value={fPass}
@@ -126,7 +131,8 @@ function App() {
           </div>
 
           {/* Generate Button */}
-          <button
+          <motion.button
+            whileTap={{ scale: 0.9 }}
             className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-lg shadow hover:opacity-90 transition"
             onClick={() => {
               createPassword();
@@ -136,7 +142,7 @@ function App() {
             }}
           >
             Generate Password
-          </button>
+          </motion.button>
         </div>
       </div>
     </>
@@ -144,4 +150,3 @@ function App() {
 }
 
 export default App;
-  
